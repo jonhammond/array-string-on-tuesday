@@ -279,16 +279,45 @@ putDash(noDash);
 
 // 1. Write a function to remove every item in an array that is not a number.
 
-var myArray = [123, 456, "string", "150 lbs"];
+var myArray = [123, 456, "string", "150 lbs", "999"];
+var numbersBag = [];
 
-function selectNums (arrayContents) {
-  
-}
+function numbersOnly (array) {
+  for (var i = 0; i <= array.length; i++) {
+    if ( isNaN(array[i]) === false) {
+      numbersBag.push(array[i]);
+    };
+  };
+  console.log(numbersBag);
+};
+
+numbersOnly(myArray);
 
 
 // 1. Write a JavaScript function to get a random item from an array.
 
+var fuckThisArray = [0, 2, 55, "STRING", "beep", "boop", 123456789];
+
+function randomItem (fuckShitBalls) {
+  var index = Math.floor(Math.random(0, fuckShitBalls.length)*fuckShitBalls.length);
+  console.log(fuckShitBalls[index]);
+};
+
+randomItem(fuckThisArray);
+
 // 1. Write a function that will take in a string and returns that same string in reverse.
+
+var offensive = "This is a fucking string, motherfucker.";
+var backwardsAF = "";
+
+function reverse_o_matic (string) {
+  for (var i=string.length -1; i >= 0; i--) {
+    backwardsAF += string[i];
+  };
+  console.log(backwardsAF);
+};
+
+reverse_o_matic(offensive);
 
 // 1. Write a JavaScript function that reverse a number e.g.
 // ```js
@@ -296,7 +325,36 @@ function selectNums (arrayContents) {
 // Expected Output : 34223
 // ```
 
+var ran_number = 123456;
+
+var rev_number = "";
+
+function reverse_a_number (numberString) {
+  temp_number = numberString.toString();
+  for (var i=temp_number.length -1; i >= 0; i--) {
+    rev_number += temp_number[i];
+  };
+  console.log(rev_number);
+};
+
+reverse_a_number(ran_number);
+
 // 1. Write a JavaScript function that takes in a string and returns it with letters in alphabetical order
+
+var sentence = "I am a sentence.";
+var letters = [];
+
+function reverse_a_string(text) {
+  for (var i=0; i < text.length; i ++) {
+    temp_string = text.split('');
+    letters.push(temp_string[i]);
+    letters.sort();
+    };
+  console.log(letters.join(""));
+};
+
+reverse_a_string(sentence);
+
 
 // 1. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
 // ```js
